@@ -1,0 +1,15 @@
+<div class="d-flex flex-column gap-3 mt-5">
+    <h1 class="align-self-center">Welcome to CRUDilicious</h1>
+    <div class="d-flex flex-row justify-content-between align-items-center">
+        <h3>Check out Some Recent Dishes</h3>
+        <a href="/new">Add a Dish</a>
+    </div>
+    <hr>
+    <div class="d-flex flex-column gap-2">
+        @{
+            foreach(Dish dish in ViewBag.AllDishes){
+                <h3><a href=@dish.DishId>@dish.Name</a> by @dish.Chef</h3>
+            }
+        }
+    </div>
+</div>

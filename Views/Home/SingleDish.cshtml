@@ -1,0 +1,16 @@
+<div class="mx-auto d-flex flex-column align-items-center mt-5">
+    <a class="align-self-start" href="/">Home</a>
+    <h1>@ViewBag.OneDish.Name</h1>
+    <h2>@ViewBag.OneDish.Chef</h2>
+    <hr>
+    <div class="align-self-start">
+        <p>@ViewBag.OneDish.Description</p>
+        <p>Calories: @ViewBag.OneDish.Calories</p>
+        <p>Tastiness: @ViewBag.OneDish.Tastiness</p>
+    </div>
+    <div class="w-100 d-flex justify-content-around">
+        <button onclick="location.href='/delete/@ViewBag.OneDish.DishId'" class="btn btn-danger">Delete</button>
+        <button onclick="location.href='/edit/@ViewBag.OneDish.DishId'" class="btn btn-primary">Edit</button>
+    </div>
+
+</div>
